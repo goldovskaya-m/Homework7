@@ -21,8 +21,7 @@ public class Main {
         }
         System.out.println();
         System.out.println();
-        int decrease = 10;
-        for (; decrease >= 1; decrease--) {
+        for (int decrease = 10; decrease >= 1; decrease--) {
             System.out.print(decrease + " ");
         }
         System.out.println();
@@ -60,9 +59,9 @@ public class Main {
             }
         }
         System.out.println("Задача7");
-        int firstFriday = 5;
-        for (int i = 1; i < 31; i++) {
-            if (i == firstFriday || (i - firstFriday) % 7 == 0) {
+        int firstFriday = 8;
+        for (int i = 5; i < 31; i++) {
+            if ((i - firstFriday) % 7 == 0) {
                 System.out.printf("Сегодня пятница, %s-e число. Необходимо подготовить отчёт. %n", i);
             }
         }
@@ -71,11 +70,29 @@ public class Main {
         int currentYear = 2024;
         int lowerBorder = currentYear - 200;
         int upperBorder = currentYear + 100;
-        for (int i = 0; i < upperBorder; i++) {
+        int interAmount = 0;
+        for (int i = 0; i < upperBorder; i++, interAmount++) {
             if (i > lowerBorder && i % period == 0) {
                 System.out.println(i);
             }
         }
+        System.out.println("inter amount: " + interAmount);
+
+        System.out.println("Задача 8 ( 2ой вариант оптимизация");
+        int periodTwo = 79;
+        int currentYearTwo = 2024;
+        int lowerBorderTwo = currentYear - 200;
+        int upperBorderTwo = currentYear + 100;
+        int interAmountTwo = 0;
+        for (int r = 0; r < upperBorderTwo; r += period, interAmountTwo++) {
+            if (r > lowerBorderTwo && r % periodTwo == 0) {
+                System.out.println(r);
+            }
+        }
+        System.out.println("inter amount: " + interAmountTwo);
     }
 }
+
+
+
 
